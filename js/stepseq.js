@@ -51,7 +51,7 @@ let urls;
 let soundIds = [];
 
 function preload() {
-	urls = loadStrings('filename.txt', preloadSounds);
+	urls = loadStrings('./assets/filename.txt', preloadSounds);
 }
 
 function preloadSounds(urls) {
