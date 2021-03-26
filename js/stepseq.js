@@ -51,7 +51,7 @@ let urls;
 let soundIds = [];
 
 function preload() {
-	urls = loadStrings('./assets/filename.txt', preloadSounds);
+	urls = loadStrings('https://ryohokobayashi.github.io/sf-stepseq/assets/filename.txt', preloadSounds);
 }
 
 function preloadSounds(urls) {
