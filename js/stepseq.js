@@ -55,8 +55,12 @@ function preload() {
 }
 
 function preloadSounds(urls) {
-	for (let url of urls) {
-		let snd = loadSound(url);
+	// for (let url of urls) {
+	// 	let snd = loadSound(url);
+	// 	sounds.push(snd);
+	// }
+	for (let i = 0; i < 72; i++) {
+		let snd = loadSound(urls[i]);
 		sounds.push(snd);
 	}
 }
@@ -136,7 +140,8 @@ function setup() {
 	uiOriginY += titleTextSize + margin;
 
 	for (let i = 0; i < numNotes; i++) {
-		let slider = createSlider(0, sounds[soundIds[i]].duration(), 0, 0);
+		// let slider = createSlider(0, sounds[soundIds[i]].duration(), 0, 0);
+		let slider = createSlider(0, 10, 0, 0);
 		startTimeOriginY.push(uiOriginY);
 		slider.position(margin + textWidth('99'), uiOriginY);
 		slider.size(sliderWidth - textWidth('99'), sliderHeight);
