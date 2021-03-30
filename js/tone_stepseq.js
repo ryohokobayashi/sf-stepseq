@@ -422,9 +422,9 @@ function touchStarted() {
 		// }
 
 		// recorder.start();
-		// if (Tone.Context.state !== 'running') {
-		// 	Tone.start();
-		// }
+		if (Tone.Context.state !== 'running') {
+			Tone.start();
+		}
 		// keys.player(0).start(0, 0, "16n");
 		// keys.player(0).stop(0);
 		if (mouseX >= seqOrigin.x && mouseX <= seqOrigin.x + seqSize.x && mouseY >= seqOrigin.y && mouseY <= seqOrigin.y + seqSize.y) {
