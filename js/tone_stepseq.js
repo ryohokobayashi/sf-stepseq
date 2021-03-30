@@ -416,6 +416,8 @@ function touchStarted() {
 		// 	sounds[0].play();
 		// 	sounds[0].stop();
 		// }
+		keys.player(0).start(0, 0, "16n");
+		keys.player(0).stop(0);
 		if (mouseX >= seqOrigin.x && mouseX <= seqOrigin.x + seqSize.x && mouseY >= seqOrigin.y && mouseY <= seqOrigin.y + seqSize.y) {
 			let noteId = int((mouseX - seqOrigin.x) / rectWidth) * numNotes + int((mouseY - seqOrigin.y) / rectHeight);
 			notes[noteId] = !notes[noteId];
