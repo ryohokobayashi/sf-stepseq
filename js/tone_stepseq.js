@@ -468,7 +468,7 @@ function exportFile() {
 		let dateObj = new Date();
 		let outFile = new p5.SoundFile();
 		outFile.setBuffer([outBuffer]);
-		outFile.save(dateObj.getFullYear() + ('00' + dateObj.getMonth()).slice(-2) + ('00' + dateObj.getDate()).slice(-2) + ('00' + dateObj.getHours()).slice(-2) + ('00' + dateObj.getMinutes()).slice(-2) + ('00' + dateObj.getSeconds()).slice(-2));
+		outFile.save(dateObj.getFullYear() + ('00' + (dateObj.getMonth() + 1)).slice(-2) + ('00' + dateObj.getDate()).slice(-2) + ('00' + dateObj.getHours()).slice(-2) + ('00' + dateObj.getMinutes()).slice(-2) + ('00' + dateObj.getSeconds()).slice(-2));
 		// window.location.reload();
 		reloadFlag = true;
 	});
