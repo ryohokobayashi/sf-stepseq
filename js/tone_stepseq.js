@@ -451,7 +451,7 @@ function exportFile() {
 	let outBuffer = new Float32Array(fileLength);
 
 	for (let note = 0; note < 4; note++) {
-		let inStart = Math.floor(sttime[note] * Tone.context.sampleRate);
+		let inStart = Math.floor(startTimes[note] * Tone.context.sampleRate);
 		for (let step = 0; step < 16; step++) {
 			// if (document.querySelector("tone-step-sequencer")._matrix[step][3 - note]) {
 			if (notes[step * numNotes + note]) {
