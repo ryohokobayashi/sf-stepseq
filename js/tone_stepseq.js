@@ -306,6 +306,10 @@ function setup() {
 		startSliders.push(slider);
 		startTimes.push(0);
 	}
+
+	const mic = new Tone.UserMedia();
+	mic.open();
+	mic.close();
 }
 
 function draw() {
@@ -416,11 +420,13 @@ function touchStarted() {
 		// 	sounds[0].play();
 		// 	sounds[0].stop();
 		// }
-		if (Tone.Context.state !== 'running') {
-			Tone.start();
-		}
-		keys.player(0).start(0, 0, "16n");
-		keys.player(0).stop(0);
+
+		// recorder.start();
+		// if (Tone.Context.state !== 'running') {
+		// 	Tone.start();
+		// }
+		// keys.player(0).start(0, 0, "16n");
+		// keys.player(0).stop(0);
 		if (mouseX >= seqOrigin.x && mouseX <= seqOrigin.x + seqSize.x && mouseY >= seqOrigin.y && mouseY <= seqOrigin.y + seqSize.y) {
 			let noteId = int((mouseX - seqOrigin.x) / rectWidth) * numNotes + int((mouseY - seqOrigin.y) / rectHeight);
 			notes[noteId] = !notes[noteId];
